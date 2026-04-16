@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devotee Dashboard | श्री एकवीरा आई</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/devotee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="devotee-header text-center">
+        <div class="container">
+            <img src="../assets/images/ekviradevi (71).jpg" width="100" class="rounded-circle border border-3 border-warning mb-3">
+            <h1 class="fw-bold">जय एकवीरा आई!</h1>
+            <h4 id="welcomeUser">Loading...</h4>
+            <p class="lead">तुमच्या भक्तीचा प्रवास येथे सुरू होतो.</p>
+            <button class="btn btn-outline-light btn-sm mt-3" onclick="logout()">लॉगआउट (Logout)</button>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <a href="../darshan.html" class="text-decoration-none">
+                    <div class="service-card">
+                        <i class="fas fa-om service-icon"></i>
+                        <h5 class="fw-bold text-dark">दर्शन बुकिंग</h5>
+                        <p class="text-muted small">दर्शनासाठी तुमचा स्लॉट आजच बुक करा.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="my-bookings.html" class="text-decoration-none">
+                    <div class="service-card">
+                        <i class="fas fa-calendar-check service-icon"></i>
+                        <h5 class="fw-bold text-dark">माझे बुकिंग्स</h5>
+                        <p class="text-muted small">तुमच्या मागील पूजेचा हिशोब पहा.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="my-donations.html" class="text-decoration-none">
+                    <div class="service-card">
+                        <i class="fas fa-heart service-icon"></i>
+                        <h5 class="fw-bold text-dark">माझी देणगी</h5>
+                        <p class="text-muted small">तुमच्या दानाची पावती डाउनलोड करा.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="history-card">
+                    <h5 class="fw-bold text-danger mb-4"><i class="fas fa-history me-2"></i> अलीकडील हालचाली</h5>
+                    <div id="recentActivity">
+                        <p class="text-center text-muted">अद्याप कोणताही इतिहास नाही.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+        window.onload = function() {
+            // लॉगिन आहे का ते तपासा
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if(!user) {
+                window.location.href = '../login.html';
+                return;
+            }
+            document.getElementById('welcomeUser').innerText = "स्वागत आहे, " + user.name;
+        };
+    </script>
+</body>
+</html>

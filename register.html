@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | श्री एकवीरा आई</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body { background-color: #fdf2e9; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .reg-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 500px; border-left: 8px solid #D4AF37; }
+    </style>
+</head>
+<body>
+    <div class="reg-box">
+        <h3 class="fw-bold text-danger mb-4 text-center">नवीन नोंदणी</h3>
+        <form onsubmit="handleRegister(event)">
+            <div class="mb-3">
+                <label class="form-label">पूर्ण नाव</label>
+                <input type="text" id="regName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ईमेल</label>
+                <input type="email" id="regEmail" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">पासवर्ड</label>
+                <input type="password" id="regPass" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-danger w-100 py-2">नोंदणी करा</button>
+        </form>
+        <div class="text-center mt-3">
+            <p class="small">आधीच खाते आहे? <a href="login.html" class="text-danger fw-bold text-decoration-none">लॉगिन करा</a></p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
