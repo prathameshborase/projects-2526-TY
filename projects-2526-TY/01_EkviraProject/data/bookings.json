@@ -1,0 +1,22 @@
+[
+  {
+    "booking_id": "BK-101",
+    "user_id": 1741285000,
+    "user_name": "Rahul Patil",
+    "pooja_type": "Abhishek",
+    "booking_date": "2026-03-15",
+    "slot_time": "08:00 AM",
+    "persons": 2,
+    "status": "Confirmed"
+  },
+  {
+    "booking_id": "BK-102",
+    "user_id": 1741285000,
+    "user_name": "Rahul Patil",
+    "pooja_type": "Maha Aarti",
+    "booking_date": "2026-03-20",
+    "slot_time": "07:00 PM",
+    "persons": 4,
+    "status": "Pending"
+  }
+]

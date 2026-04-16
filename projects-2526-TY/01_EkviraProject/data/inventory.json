@@ -1,0 +1,23 @@
+[
+  {
+    "item_id": "INV-01",
+    "item_name": "Coconuts (नारळ)",
+    "quantity_available": 150,
+    "unit": "pcs",
+    "last_updated": "2026-03-06"
+  },
+  {
+    "item_id": "INV-02",
+    "item_name": "Pure Ghee (तूप)",
+    "quantity_available": 25,
+    "unit": "kg",
+    "last_updated": "2026-03-06"
+  },
+  {
+    "item_id": "INV-03",
+    "item_name": "Prasad Packets",
+    "quantity_available": 500,
+    "unit": "packets",
+    "last_updated": "2026-03-05"
+  }
+]
